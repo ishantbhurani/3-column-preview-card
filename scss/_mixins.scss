@@ -1,0 +1,18 @@
+@mixin for-desktop {
+  @media screen and (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin for-tablet-and-below {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin flex($direction: row, $align: center, $justify: center) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+}

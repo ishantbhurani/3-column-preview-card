@@ -1,0 +1,123 @@
+@import "variables";
+@import "mixins";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  @include flex;
+
+  width: 100%;
+  min-height: 100vh;
+  padding: 3em 1.5em;
+  font-size: 15px;
+  font-family: "Lexend Deca", sans-serif;
+  background-color: $gray;
+  color: $white;
+  line-height: 1.6;
+}
+
+button {
+  background-color: $gray;
+  outline: transparent;
+  border: 2px solid transparent;
+  width: fit-content;
+  font-size: 0.95rem;
+  padding: 1em 2em;
+  font-weight: bold;
+  border-radius: 2em;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background: none;
+    border-color: $white;
+    color: $white !important;
+  }
+}
+
+.container {
+  @include flex($align: stretch);
+
+  @include for-tablet-and-below {
+    @include flex(column);
+  }
+
+  @include for-desktop {
+    width: unset;
+  }
+
+  width: 90%;
+  overflow: hidden;
+}
+
+.card {
+  @include flex(column, stretch);
+
+  @include for-desktop {
+    padding: 2em;
+  }
+
+  max-width: 300px;
+  padding: 3em;
+
+  img {
+    width: fit-content;
+  }
+
+  &-sedans {
+    @include for-tablet-and-below {
+      border-radius: $border-radius $border-radius 0 0;
+    }
+
+    background-color: $bright-orange;
+    border-radius: $border-radius 0 0 $border-radius;
+
+    button {
+      color: $bright-orange;
+    }
+  }
+
+  &-suvs {
+    background-color: $dark-cyan;
+
+    button {
+      color: $dark-cyan;
+    }
+  }
+
+  &-luxury {
+    @include for-tablet-and-below {
+      border-radius: 0 0 $border-radius $border-radius;
+    }
+
+    background-color: $very-dark-cyan;
+    border-radius: 0 $border-radius $border-radius 0;
+
+    button {
+      color: $very-dark-cyan;
+    }
+  }
+}
+
+.title {
+  font-family: "Big Shoulders Display", cursive;
+  color: $gray;
+  text-transform: uppercase;
+  padding: 0.5em 0;
+  font-size: 2.5rem;
+}
+
+.description {
+  @include for-tablet-and-below {
+    padding-bottom: 1.5em;
+  }
+
+  flex-grow: 1;
+  padding-bottom: 5em;
+}

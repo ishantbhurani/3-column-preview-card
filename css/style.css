@@ -1,0 +1,186 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  padding: 3em 1.5em;
+  font-size: 15px;
+  font-family: "Lexend Deca", sans-serif;
+  background-color: #f2f2f2;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.6;
+}
+
+button {
+  background-color: #f2f2f2;
+  outline: transparent;
+  border: 2px solid transparent;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 0.95rem;
+  padding: 1em 2em;
+  font-weight: bold;
+  border-radius: 2em;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+  background: none;
+  border-color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.75) !important;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 90%;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    width: unset;
+  }
+}
+
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 300px;
+  padding: 3em;
+}
+
+@media screen and (max-width: 1024px) {
+  .card {
+    padding: 2em;
+  }
+}
+
+.card img {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.card-sedans {
+  background-color: #e38826;
+  border-radius: 0.5em 0 0 0.5em;
+}
+
+@media screen and (max-width: 768px) {
+  .card-sedans {
+    border-radius: 0.5em 0.5em 0 0;
+  }
+}
+
+.card-sedans button {
+  color: #e38826;
+}
+
+.card-suvs {
+  background-color: #006970;
+}
+
+.card-suvs button {
+  color: #006970;
+}
+
+.card-luxury {
+  background-color: #004241;
+  border-radius: 0 0.5em 0.5em 0;
+}
+
+@media screen and (max-width: 768px) {
+  .card-luxury {
+    border-radius: 0 0 0.5em 0.5em;
+  }
+}
+
+.card-luxury button {
+  color: #004241;
+}
+
+.title {
+  font-family: "Big Shoulders Display", cursive;
+  color: #f2f2f2;
+  text-transform: uppercase;
+  padding: 0.5em 0;
+  font-size: 2.5rem;
+}
+
+.description {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding-bottom: 5em;
+}
+
+@media screen and (max-width: 768px) {
+  .description {
+    padding-bottom: 1.5em;
+  }
+}
+/*# sourceMappingURL=style.css.map */
